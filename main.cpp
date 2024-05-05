@@ -23,6 +23,7 @@ int main() {
         BeginDrawing();
         //Drawing
         DrawCircle(screen_width/2,screen_height/2, 20, PINK);
+        DrawLine(screen_width/2, 0, screen_width/2, screen_width, GRAY);
         DrawRectangle(10, y_center, rectangle_width, rectangle_height, MAGENTA);
         DrawRectangle(1245, y_center, rectangle_width, rectangle_height, MAGENTA);
         EndDrawing();
