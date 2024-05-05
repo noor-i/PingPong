@@ -1,6 +1,5 @@
 #include "Ball.h"
-#include <iostream>
 
 void Ball::Draw(){
-    
+    DrawCircle(x, y, 20, PINK);
 }
