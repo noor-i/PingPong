@@ -29,12 +29,17 @@ int main() {
     //WindowShouldClose() checks if the escape key/close button pressed
     while(WindowShouldClose()==false){
         BeginDrawing();
+
+        //Updating
+        ball.Update();
+
         //Drawing
         DrawLine(screen_width/2, 0, screen_width/2, screen_width, GRAY);
         ball.Draw();
         DrawRectangle(10, y_center, rectangle_width, rectangle_height, MAGENTA);
         DrawRectangle(1245, y_center, rectangle_width, rectangle_height, MAGENTA);
         //End Drawing
+
         EndDrawing();
     }
 

@@ -11,6 +11,7 @@ public:
     int radius;
 
     void Draw();
+    void Update();
 };
 
 #endif // BALL_H
