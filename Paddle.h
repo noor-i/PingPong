@@ -12,6 +12,7 @@ public:
 
     Paddle();
     void Draw();
+    void Update();
 
 private:
     Screen s;
