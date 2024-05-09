@@ -30,6 +30,7 @@ int main() {
         //Updating
         b.Update();
         player.Update();
+        cpu.Update(b.y_pos);
 
         //Drawing
         ClearBackground(BLACK);
