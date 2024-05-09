@@ -27,6 +27,7 @@ int main() {
 
         //Updating
         b.Update();
+        player.Update();
 
         //Drawing
         ClearBackground(BLACK);
