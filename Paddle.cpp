@@ -20,16 +20,14 @@ void Paddle::Update(){
     if(IsKeyDown(KEY_DOWN)){
         y = y + speed;
     }
+    LimitMovement();
+}
+
+void Paddle::LimitMovement(){
     if(y <= 0){
         y = 0;
     }
     if(y + height >= s.getScreenHeight()){
         y = s.getScreenHeight() - height;
     }
-    /*
-    // This is inefficient for checking racket within screen bounds
-    if(y >= s.getScreenHeight() - height || y <= 0){
-        y *= -1;
-    }
-    */ 
 }

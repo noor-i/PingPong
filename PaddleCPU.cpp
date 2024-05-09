@@ -22,4 +22,5 @@ void PaddleCPU::Update(int ball_y)
     {
         y = y + speed;
     }
+    LimitMovement();
 }

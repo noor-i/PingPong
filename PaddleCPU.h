@@ -8,6 +8,7 @@ class PaddleCPU: public Paddle{
 public:
     PaddleCPU(); // Constructor
     void Update(int ball_y);
+
 private:
     Screen s;
 };

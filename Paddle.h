@@ -14,6 +14,9 @@ public:
     void Draw();
     void Update();
 
+protected:
+    void LimitMovement();
+
 private:
     Screen s;
 };
