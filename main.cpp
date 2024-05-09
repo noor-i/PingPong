@@ -32,8 +32,8 @@ int main() {
         ClearBackground(BLACK);
         DrawLine(screen_width/2, 0, screen_width/2, screen_width, GRAY);
         b.Draw();
-        DrawRectangle(10, y_center, racket_width, racket_height, MAGENTA);
-        DrawRectangle(screen_width - 35, y_center, racket_width, racket_height, MAGENTA);
+        DrawRectangle(10, y_center, racket_width, racket_height, PINK);
+        DrawRectangle(screen_width - 35, y_center, racket_width, racket_height, PINK);
         //End Drawing
 
         EndDrawing();
