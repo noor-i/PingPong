@@ -4,12 +4,14 @@
 #include "Ball.h"
 #include "Screen.h"
 #include "Paddle.h"
+#include "PaddleCPU.h"
 
 using namespace std;
 
 int main() {
     Ball b;
     Paddle player;
+    PaddleCPU cpu;
 
     const int screen_width = b.getScreen().getScreenWidth();
     const int screen_height = b.getScreen().getScreenHeight();
@@ -33,7 +35,7 @@ int main() {
         ClearBackground(BLACK);
         DrawLine(screen_width/2, 0, screen_width/2, screen_width, GRAY);
         b.Draw();
-        DrawRectangle(10, screen_height/2 - 60, player.width, player.height, PINK);
+        cpu.Draw();
         player.Draw();
         //End Drawing
 
