@@ -10,7 +10,7 @@ Paddle::Paddle(){
 }
 
 void Paddle::Draw(){
-    DrawRectangle(x, y, width, height, WHITE);    
+    DrawRectangleRounded(Rectangle{x, y, width, height}, 0.8, 0, WHITE);    
 }
 
 void Paddle::Update(){

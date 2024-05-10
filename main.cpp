@@ -50,15 +50,19 @@ int main() {
 
         //Drawing
         ClearBackground(b.getScreen().getColor());
+        //User background to the right of the divider (light pink)
         DrawRectangle(screen_width/2, 0, screen_width/2, screen_height, {255, 226,229, 100});
+        //Circle accent on gameboard (light transparent green)
         DrawCircle(screen_width/2, screen_height/2, 145, Color{226,255,226,50});
+        //Gameboard divider (pong fence)
         DrawLine(screen_width/2, 0, screen_width/2, screen_width, GRAY);
+
         b.Draw();
         cpu.Draw();
         player.Draw();
+
         DrawText(TextFormat("%i", b.cpu_score), screen_width/4, 20, 80, WHITE);
         DrawText(TextFormat("%i", b.player_score), (screen_width/4) * 3, 20, 80, WHITE);
-        //DrawText(text, x, y, 80, DARKPURPLE);
         //End Drawing
 
         EndDrawing();
