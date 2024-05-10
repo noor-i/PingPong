@@ -11,6 +11,7 @@
 using namespace std;
 
 int main() {
+    //Declare objects
     Ball b;
     Paddle player;
     PaddleCPU cpu;

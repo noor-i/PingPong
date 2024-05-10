@@ -1,5 +1,6 @@
 #include "Screen.h"
 
+//Getters
 int Screen::getScreenWidth() const{
     return screen_width;
 }

@@ -1,5 +1,6 @@
 #include "PaddleCPU.h"
 
+// CPU Paddle Constructor
 PaddleCPU::PaddleCPU(){
     width = 25;
     height = 120;
@@ -9,7 +10,7 @@ PaddleCPU::PaddleCPU(){
 }
 
 // AI Algorithm: if the centre of the ball is greater than the 
-// centre of the paddle, raise the paddle/racket up 
+// centre of the paddle, raise the paddle/racket up, vice versa
 void PaddleCPU::Update(int ball_y)
 {
     //y pos of ball -its centre, is above the y pos of the paddle's centre

@@ -6,7 +6,7 @@
 
 class PaddleCPU: public Paddle{
 public:
-    PaddleCPU(); // Constructor
+    PaddleCPU(); 
     void Update(int ball_y);
 
 private:
