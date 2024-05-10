@@ -12,6 +12,9 @@ public:
     int speed_y;
     int radius;
 
+    int player_score = 0;
+    int cpu_score = 0;
+
     Ball();
     void Draw();
     void Update();

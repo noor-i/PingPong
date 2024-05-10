@@ -27,10 +27,24 @@ int main() {
     while(WindowShouldClose()==false){
         BeginDrawing();
 
-        //Updating
+        //Updating      
         b.Update();
         player.Update();
         cpu.Update(b.y_pos);
+
+        //Check for collisions
+        if(CheckCollisionCircleRec(Vector2{b.x_pos,b.y_pos}, 
+                                    b.radius,
+                                    Rectangle{player.x, player.y, player.width, player.height}))
+        {
+            b.speed_x *= -1;
+        }
+        if(CheckCollisionCircleRec(Vector2{b.x_pos,b.y_pos}, 
+                                    b.radius,
+                                    Rectangle{cpu.x, cpu.y, cpu.width, cpu.height}))
+        {
+            b.speed_x *= -1;
+        }
 
         //Drawing
         ClearBackground(BLACK);
@@ -38,6 +52,9 @@ int main() {
         b.Draw();
         cpu.Draw();
         player.Draw();
+        DrawText(TextFormat("%i", b.cpu_score), screen_width/4, 20, 80, DARKPURPLE);
+        DrawText(TextFormat("%i", b.player_score), (screen_width/4) * 3, 20, 80, DARKPURPLE);
+        //DrawText(text, x, y, 80, DARKPURPLE);
         //End Drawing
 
         EndDrawing();

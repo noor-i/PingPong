@@ -20,9 +20,13 @@ void Ball::Update(){
     {
         speed_y *= -1;
     }
-    if((x_pos + radius) >= s.getScreenWidth() || (x_pos - radius) <= 0)
+    if((x_pos + radius) >= s.getScreenWidth()) //CPU wins
     {
-        speed_x *= -1;
+        cpu_score++;
+    }
+    if((x_pos - radius) <= 0) //CPU wins
+    {
+        player_score++;
     }
 }
 
