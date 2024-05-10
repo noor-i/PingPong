@@ -10,7 +10,7 @@ Paddle::Paddle(){
 }
 
 void Paddle::Draw(){
-    DrawRectangle(x, y, width, height, PINK);    
+    DrawRectangle(x, y, width, height, WHITE);    
 }
 
 void Paddle::Update(){

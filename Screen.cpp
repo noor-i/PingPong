@@ -11,3 +11,7 @@ int Screen::getScreenHeight() const{
 string Screen::getGameTitle() const{
     return title;
 }
+
+Color Screen::getColor(){
+    return pink;
+}

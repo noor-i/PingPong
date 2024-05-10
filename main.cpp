@@ -5,6 +5,8 @@
 #include "Screen.h"
 #include "Paddle.h"
 #include "PaddleCPU.h"
+//Source used to get game user interface colours:
+//https://www.w3schools.com/html/html_colors_rgb.asp#:~:text=RGB%20Color%20Values&text=Each%20parameter%20(red%2C%20green%2C,x%20256%20%3D%2016777216%20possible%20colors!
 
 using namespace std;
 
@@ -47,13 +49,15 @@ int main() {
         }
 
         //Drawing
-        ClearBackground(BLACK);
+        ClearBackground(b.getScreen().getColor());
+        DrawRectangle(screen_width/2, 0, screen_width/2, screen_height, {255, 226,229, 100});
+        DrawCircle(screen_width/2, screen_height/2, 145, Color{226,255,226,50});
         DrawLine(screen_width/2, 0, screen_width/2, screen_width, GRAY);
         b.Draw();
         cpu.Draw();
         player.Draw();
-        DrawText(TextFormat("%i", b.cpu_score), screen_width/4, 20, 80, DARKPURPLE);
-        DrawText(TextFormat("%i", b.player_score), (screen_width/4) * 3, 20, 80, DARKPURPLE);
+        DrawText(TextFormat("%i", b.cpu_score), screen_width/4, 20, 80, WHITE);
+        DrawText(TextFormat("%i", b.player_score), (screen_width/4) * 3, 20, 80, WHITE);
         //DrawText(text, x, y, 80, DARKPURPLE);
         //End Drawing
 

@@ -18,6 +18,7 @@ public:
     Ball();
     void Draw();
     void Update();
+    void ResetBall();
     Screen getScreen() const;
 private:
     Screen s;
